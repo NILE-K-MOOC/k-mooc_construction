@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>이미지 꽉 차게 표시 (반응형)</title>
+  <title>이미지 전체 보기 (잘림 없음, 반응형)</title>
   <style>
     html, body {
       height: 100%;
@@ -18,12 +18,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #f0f0f0; /* 여백이 잘 보이도록 배경색 추가(선택사항) */
     }
     .container img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 이미지를 꽉 채우고 비율 유지 */
+      object-fit: contain; /* 이미지 전체 표시, 잘림 없음 */
       display: block;
+      background: white; /* 이미지 투명 배경 대비용(선택사항) */
     }
   </style>
 </head>
